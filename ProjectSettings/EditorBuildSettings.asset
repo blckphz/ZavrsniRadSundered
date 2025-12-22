@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/mainMenu.unity
+    guid: 793d447f694461845847452ba720b029
+  - enabled: 1
+    path: Assets/Scenes/lorrinsScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/lorrinsbeachScene.unity
+    guid: 53b8ef168f7675549ba12ea3b48790b9
+  - enabled: 1
+    path: Assets/Scenes/IntroSCene.unity
+    guid: 61d9f7edd6560ae49911f50921b37510
+  - enabled: 1
+    path: Assets/Scenes/PathScene.unity
+    guid: 3b26fd5acb271e64db74156dd50b399c
+  - enabled: 1
+    path: Assets/Scenes/OverWorld.unity
+    guid: 9fedee9617dcd6c43b6b233e7408be43
+  - enabled: 1
+    path: Assets/Scenes/druidForest.unity
+    guid: 50ff477242c90ed4e92395a8eb480192
+  - enabled: 1
+    path: Assets/Scenes/druidCave.unity
+    guid: 89fd74d664ac7184f941de3384185a67
+  - enabled: 1
+    path: Assets/Scenes/ironCircle.unity
+    guid: 9e07ebcbd04106146b0d0282a1128f08
+  - enabled: 1
+    path: Assets/Scenes/obsidianCircle.unity
+    guid: 71a66e714cc019a47a30b1ee7ef6be7d
+  - enabled: 1
+    path: Assets/Scenes/ironcirclemine.unity
+    guid: 290d5f10ba3321a46bdb84be5d408ed4
+  - enabled: 1
+    path: Assets/Scenes/lapisCir.unity
+    guid: 31f7b09507924774dad1945f9119d201
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0

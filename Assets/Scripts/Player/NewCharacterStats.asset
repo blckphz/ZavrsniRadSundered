@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d0cf960a90cd74f95a69cd235027a0, type: 3}
+  m_Name: NewCharacterStats
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStatsSO
+  maxHealth: 100
+  walkSpeed: 5
+  Abilities:
+  - {fileID: 11400000, guid: b83b8e5d96deb0746ae07214e640f336, type: 2}
+  - {fileID: 11400000, guid: bccd13596f4bc2647ab86140a16d8b1c, type: 2}
+  - {fileID: 11400000, guid: fec104b0fcd5bf149bc11ab88e5eec6a, type: 2}
+  - {fileID: 11400000, guid: 369159379b759024a9c8e2cce1ffb6cd, type: 2}
+  currentHealth: 100

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73751ee688b15854cb0e996ece082ad1, type: 3}
+  m_Name: thunderWave
+  m_EditorClassIdentifier: Assembly-CSharp::chainLightningAbil
+  abilityName: 
+  cooldown: 3
+  Icon: {fileID: 21300000, guid: af00ffeed56220144a144dcf329e4bd6, type: 3}
+  cooldownTimer: 0
+  activationSound: {fileID: 8300000, guid: 02972862b08da2141a0f9ff3bd780c3f, type: 3}
+  soundVolume: 1
+  pitchVariation: 0.1
+  manualSoundControl: 0
+  audioFxGroup: {fileID: 801418624231752855, guid: 07e75266d29cdfe4f9dc35886283c5d8, type: 2}
+  OwnerPlayer: {fileID: 0}
+  damage: 4
+  critChance: 0.2
+  critMultiplier: 2
+  hitSound: {fileID: 8300000, guid: 02972862b08da2141a0f9ff3bd780c3f, type: 3}
+  hitVolume: 1
+  hitPitchVariation: 0.1
+  projectilePrefab: {fileID: 0}
+  range: 8
+  projectileSpeed: 4
+  fireRate: 1
+  maxBounces: 3
+  damageFalloff: 0.7
+  thunderPrefab: {fileID: 7027941670037836164, guid: 4726f6662a3f7ba498d5073eaea1b4a1, type: 3}
+  rotationOffset: 97.64

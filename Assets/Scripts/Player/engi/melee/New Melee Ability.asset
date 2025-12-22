@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bb9252f380faf4ab81721b4165a07f, type: 3}
+  m_Name: New Melee Ability
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeAbilitySO
+  abilityName: s
+  cooldown: 0.94
+  Icon: {fileID: 8875903642638814252, guid: 894cde8be21706c409fe43ff4f62e402, type: 3}
+  cooldownTimer: 0
+  activationSound: {fileID: 8300000, guid: 1fe39aa8fac66c7409d30a338c1567c9, type: 3}
+  soundVolume: 1
+  pitchVariation: 0.132
+  manualSoundControl: 1
+  audioFxGroup: {fileID: 801418624231752855, guid: 07e75266d29cdfe4f9dc35886283c5d8, type: 2}
+  OwnerPlayer: {fileID: 0}
+  damage: 3
+  critChance: 0.356
+  critMultiplier: 2
+  hitSound: {fileID: 8300000, guid: 7fc7d82137e5f734184d2d1696adba06, type: 3}
+  hitVolume: 1
+  hitPitchVariation: 0.1
+  range: 0.4
+  upOffset: {x: 0, y: 0}
+  downOffset: {x: 0, y: 0}
+  leftOffset: {x: 0, y: 0}
+  rightOffset: {x: 0, y: 0}
+  swingCount: 2
+  swingDelay: 0.52
+  animationSpeed: 2.51
+  isSwinging: 0
+  baseScale: 3
+  stunDamageMultiplier: 1
