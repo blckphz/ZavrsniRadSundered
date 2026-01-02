@@ -32,11 +32,6 @@ public class chainLightningBehav : MonoBehaviour
         currentDamage = abil.damage;
         rotationOffset = rotOffset;
 
-        if (TryGetComponent(out SpriteRenderer sr))
-        {
-            mat = Instantiate(sr.material);
-            sr.material = mat;
-        }
 
         RotateTowards(direction);
     }
