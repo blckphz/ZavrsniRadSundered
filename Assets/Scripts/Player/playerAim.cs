@@ -1,34 +1,14 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class playerAim : MonoBehaviour
+public class PlayerAim : MonoBehaviour
 {
     public Transform player;
-    public Transform followAnchor;
-    public QuestLogUI questLogUI;
-    public CinemachineCamera vCam;
+    public QuestLogUI questLog;      
+    public CinemachineCamera vCam;  
 
-    public float maxOffset = 3f;
+    public float maxDistance = 3f;
     public float followSpeed = 5f;
-
-    private Camera cam;
-
-    public static playerAim Instance { get; private set; }
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-            return;
-        }
-        Instance = this;
-    }
-
-    void Start()
-    {
-        cam = Camera.main;
-    }
 
     void Update()
     {
@@ -37,37 +17,34 @@ public class playerAim : MonoBehaviour
             player = GameObject.Find("player(Clone)").transform;
         }
 
-        if (vCam != null && questLogUI != null)
+        if (questLog != null && questLog.IsOpen())
         {
-            vCam.Follow = questLogUI.IsOpen() ? player : followAnchor;
+            vCam.Follow = player;
+        }
+        else
+        {
+            vCam.Follow = this.transform;
         }
 
-        Transform target = player;
-        Vector3 mousePos = GetMouseWorldPosition();
-        Vector3 direction = mousePos - target.position;
-        Vector3 clampedOffset = Vector3.ClampMagnitude(direction, maxOffset);
-        Vector3 targetPos = target.position + clampedOffset;
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+
+        Vector3 direction = mousePos - player.position;
+
+        if (direction.magnitude > maxDistance)
+        {
+            direction = direction.normalized * maxDistance;
+        }
+
+        Vector3 targetPos = player.position + direction;
 
         transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
     }
 
-    public Vector3 GetMouseWorldPosition()
+    public Vector2 GetAimDir()
     {
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0f;
-        return mousePos;
-    }
-
-    public Vector2 GetAimDirection()
-    {
-        if (player == null) return Vector2.right;
-        return ((Vector2)GetMouseWorldPosition() - (Vector2)player.position).normalized;
-    }
-
-    public static Vector2 GetAimDir()
-    {
-        if (Instance != null)
-            return Instance.GetAimDirection();
-        return Vector2.right;
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = (Vector2)mousePos - (Vector2)player.position;
+        return dir.normalized;
     }
 }

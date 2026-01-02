@@ -21,6 +21,8 @@ public class meleeAbil : offensiveMelee
     private WooshPool wooshPool;
     public int stunDamageMultiplier;
 
+
+    private Vector2 aimDir;
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -74,7 +76,14 @@ public class meleeAbil : offensiveMelee
 
         for (int i = 0; i < swingCount; i++)
         {
-            Vector2 aimDir = playerAim.GetAimDir();
+            PlayerAim aimingScript = GameObject.FindAnyObjectByType<PlayerAim>();
+
+            if (aimingScript != null)
+            {
+                aimDir = aimingScript.GetAimDir();
+            }
+
+            SpawnWoosh(user, aimDir);
             SpawnWoosh(user, aimDir);
             PlaySound(user.transform.position);
 
