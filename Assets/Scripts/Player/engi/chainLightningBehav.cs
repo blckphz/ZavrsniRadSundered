@@ -70,7 +70,6 @@ public class chainLightningBehav : MonoBehaviour
 
     private void HitTarget(GameObject targetObj, IDamageable damageable)
     {
-        if (hitTargets.Contains(targetObj)) return;
 
         int finalDamage = ability.ApplyCrit(currentDamage, out bool isCrit);
 
